@@ -8,13 +8,13 @@
   * [ ] Add an additional argument to the function that takes the conversion rate of human to dog years.
 */
 
-function calculateDogAge(puppyAge) {
+function calculateDogAge(puppyAge, conversion = 7) {
   // Your code goes here
   if(!Number.isNaN(puppyAge)){
-    return puppyAge * 7;
+    return puppyAge * conversion;
   }
 }
-console.log(calculateDogAge(2, (2/7)));
+console.log(calculateDogAge(2));
 
 /*
 2. 🎖Write a function named calculateMoviesToWatch that:
@@ -26,7 +26,7 @@ console.log(calculateDogAge(2, (2/7)));
 function calculateMoviesToWatch(age, n) {
   // Your code goes here
   const MAX_AGE = 80;
-  const totalMovies = (MAX_AGE - age)* n*4;
+  const totalMovies = (MAX_AGE - age)*12* n*4;
   return totalMovies;
 }
 
@@ -93,14 +93,14 @@ function sumOrProductOfN(n, str) {
       sum = sum + i;
     }
     return sum;
-  }else if((str !== "sum")|| (str !== "product")){
-    alert("Not a valid input");
-  }else{
+  }else if(str === "product"){
     let product =1;
     for(let i =1; i <= n; i++){
       product = product * i;
     }
     return product;
+  }else{
+    alert("Not a valid input");
   }
 }
 

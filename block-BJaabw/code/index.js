@@ -84,7 +84,7 @@ function sum() {
 }
 
 // Function Test
-sum(2, 4); // 4
+sum(2, 4); // 4 
 sum('Arya', 'Stark'); // "Arya Stark"
 sum('Arya', 2); // Enter valid Values
 sum(null, 2); // Enter valid Values
